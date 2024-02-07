@@ -1,4 +1,3 @@
-
 let width = window.innerWidth;
 let height = window.innerHeight;
 const intro = document.getElementsByClassName("intro")[0];
@@ -49,3 +48,24 @@ function nevar() {
 }
 inicio();
 nevar();
+
+function handleResize() {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+  intro.style.fontSize = width / 30 + "px";
+  historia.style.fontSize = width / 20 + "px";
+  paragrafos.style.height = height + "px";
+
+  // Add/remove classes based on screen width
+  if (width <= 768) {
+    intro.classList.add("small-screen");
+    historia.classList.add("small-screen");
+  } else {
+    intro.classList.remove("small-screen");
+    historia.classList.remove("small-screen");
+  }
+}
+
+// Initial setup
+window.addEventListener("resize", handleResize);
+handleResize();

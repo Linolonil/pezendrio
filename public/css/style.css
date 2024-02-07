@@ -86,3 +86,29 @@ canvas {
   left: 0;
   z-index: -1;
 }
+p {
+  text-align: justify;
+}
+
+.title {
+  font-size: 200px;
+  margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Add styles for smaller screens */
+  .intro {
+    left: 10%;
+  }
+
+  .paragrafos {
+    left: 5%;
+    width: 90%;
+    transform: perspective(300px) rotateX(20deg);
+  }
+
+  .title {
+    font-size: 100px;
+    margin-bottom: 50px;
+  }
+}
